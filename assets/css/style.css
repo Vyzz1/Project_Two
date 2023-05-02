@@ -16,20 +16,24 @@
     padding: 0;
 }
 .header ul li{
-    margin-left:35px;
+    margin-left:15px;
 }
 .header ul li a{
-    font-size: 15px;
+    font-size: 0.75rem;
     color: #000;
 }
 .header ul li a:hover{
     color: var(--second-color);
 }
+.header ul .bar i{
+    font-size: 21px;
+    display: none;
+}
 .header .inner-main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 25px;
+    padding: 15px;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;       
     background: #FFFFFF;
     border-radius: 35px;
@@ -37,6 +41,25 @@
 .header .inner-main .inner-img img{
     height: 35px;
     width: auto;
+}
+@media (max-width: 991.98px){
+   
+    .header ul .bar i{
+        display: block;
+    }
+    .header ul li:nth-child(-n+7){
+        display: none;
+    }
+    .header .inner-main{
+        padding: 15px;
+    }
+    
+}
+@media (max-width: 575.98px){
+    .header{
+        left:10px;
+        right: 10px;
+    }
 }
 /* End Header */
 
@@ -90,24 +113,30 @@
     max-width: 600px;
     margin: auto;
 }
-.section1 .inner-item{
+.section-sub1 .inner-item{
     background: #FFFFFF;
     padding: 25px;
     text-align: center;
     border-radius: 25px;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
-.section1 .inner-item .inner-title{
+.section-sub1{
+    padding: 80px 0;
+    margin-top: -260px;
+}
+.section-sub1 .inner-item .inner-title{
     font-size: 18px;
     color: var(--color-text);
     font-weight:500;
     margin-bottom: 25px;
 }
-.section1 .inner-item .inner-des{
+.section-sub1 .inner-item .inner-des{
     font-size: 14px;
     color: #777777;
 }
-.section1 .logo {
+.section-sub1 .logo {
     background: var(--first-color);
     width: 80px;
     height: 80px;
@@ -119,13 +148,20 @@
     padding: 10PX;
    
 }
-.section1 .logo img{
+.section-sub1 .logo img{
    width: 100%;
    height: 100%;
    object-fit: contain;
 }
-.section1 .inner-item:hover .logo{
+.section-sub1 .inner-item:hover .logo{
     background:var(--second-color);
+}
+@media (max-width: 991.98px) {
+    .section-sub1{
+        margin-top: 0 ;
+        padding: 50px 0;
+    }
+
 }
 /* End 1 */
 
@@ -152,6 +188,29 @@
 .section2 hr{
     margin: 75px 0;
 }
+@media(max-width:991.98px){
+    .section2 .inner-img{
+        text-align: center;
+        width: 30%;
+        height: auto;
+        margin: auto;
+    }
+    .section2 .inner-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .section2 .content{
+        margin-top:  25px;
+    }
+    .section2 .content-below{
+        margin-bottom: 25px;
+    }
+    .section2 .inner-desc{
+        font-size: 1.75vh;
+    }
+
+}
 .section3{
     padding: 80px 0;
     background: url(../images/work-process-bg.png);
@@ -175,6 +234,7 @@
 }
 .section3 .inner-item{
     background: #FFFFFF;
+    margin-bottom: 25px;
     text-align: center;
     padding: 15px 25px;
     border-radius: 15px;
@@ -189,6 +249,7 @@
 .section3 .inner-item .des{
     color: #777777;
 }
+
 /* End 3 */
 
 /* Section 4 */
@@ -220,6 +281,7 @@
     border-radius: 25px;
     padding: 34px 15px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    margin-bottom: 25px;
 }
 .section4 .inner-item .inner-content{
     color: #777777;
@@ -290,6 +352,7 @@
     text-align: center;
     border-radius:25px ;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+    margin-bottom: 25px;
 
 }
 .section5 .inner-box .price{
@@ -307,7 +370,7 @@
 }
 .section5 .inner-box .price .money{
     color: #FFFFFF;
-    font-size: 23px;
+    font-size: 17.5px;
     font-weight: 500;
 }
 .section5 .inner-box .price .annua{
@@ -371,6 +434,22 @@
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
+@media (max-width:991.98px){
+    .section6 .inner-content::after{
+        display: none;
+    }
+    .section6 .inner-content{
+        text-align: center;
+    }
+
+}
+@media(max-width:767.98px){
+    .section6 .inner-content{
+        margin-bottom: 16px;
+    }
+    
+
+}
 /* End section 6 */
 
 /* Section 7 */
@@ -394,6 +473,7 @@
 }
 .section7 .inner-item{
     text-align: center;
+    margin-bottom: 25px;
 }
 .section7 .inner-item .inner-title{
     font-size: 18px;
@@ -446,6 +526,9 @@
     color: #777777;
     font-size: 13px;
     margin: auto;
+}
+.section-form .inner-content{
+    margin-bottom: 45px;
 }
 .section-form .inner-content .inner-title{
     font-size: 18px;
